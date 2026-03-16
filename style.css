@@ -1,0 +1,375 @@
+:root {
+    --Main-color: #d3ad7f;
+    --black: #131313;
+    --BG: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--BG);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* --- HEADER --- */
+.reader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--BG);
+}
+
+.reader section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+
+.nave-bar a {
+    margin: 0 1rem;
+    font-size: 1.0rem;
+    color: #fff;
+}
+
+
+.nave-bar a:hover {
+    color: var(--Main-color);
+    border-bottom: 0.1rem solid var(--Main-color);
+    padding-bottom: 0.5rem;
+}
+
+.icons img {
+    margin: 0 1rem;
+    cursor: pointer;
+    width: 30px;
+}
+
+.icons img:hover {
+    background-color: var(--Main-color);
+    padding-bottom: 0.5rem;
+    border-radius: 80%;
+}
+
+/* --- HOME --- */
+.home-container {
+    background: url('Imagens/plano-de-fundo.jpg') no-repeat;
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-container section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.content h3 {
+    font-size: 6rem;
+    color: #fff;
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/* --- COMPONENTES GERAIS --- */
+.btn {
+    background-color: var(--Main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+.title {
+    text-align: center;
+    color: var(--Main-color);
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: #fff;
+}
+
+/* --- ABOUT --- */
+.about .Row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 2rem;
+}
+
+.about .content {
+    padding: 2rem;
+}
+
+.about .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* --- MENU --- */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    background-color: var(--black);
+    color: #fff;
+}
+
+.menu .box {
+    padding: 3rem;
+    text-align: center;
+    border: var(--border);
+}
+
+
+
+.menu .box .box-content {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.menu .box .box-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.info-privilegiada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 3, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.info-privilegiada p {
+    color: var(--Main-color) !important;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-style: italic;
+    text-align: center;
+    margin: 2rem;
+}
+
+
+
+.menu .box:hover .box-content img {
+    transform: scale(1.1);
+    filter: blur(3px) brightness(0.5);
+}
+
+.menu .box:hover .info-privilegiada {
+    opacity: 1;
+}
+
+.menu .box:hover {
+    background-color: var(--black);
+    /* Mantive preto para o segredo brilhar mais */
+    border: 0.1rem solid var(--Main-color);
+}
+
+.about .content span{
+    color: #d3ad7f;
+}
+
+.Price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.Price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--black);
+}
+
+.review .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 2rem 0;
+    font-style: italic;
+}
+
+.review .box .user {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-top: 1rem;
+    border: 2px solid var(--Main-color);
+}
+
+.review .box h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.review .box .quote {
+    height: 3rem;
+}
+/* --- ADDRESS --- */
+.address .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--black);
+    padding: 2rem;
+}
+
+.address .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    height: 400px;
+    filter: grayscale(1) invert(1); 
+}
+
+.address .row .content {
+    flex: 1 1 35rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.address .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.address .row .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 2;
+}
+.address .map {
+    width: 100%;
+    height: 400px;
+    filter: grayscale(100%) invert(90%) contrast(120%); 
+    border: var(--border);
+}
+
+.address .content p span {
+    color: var(--Main-color);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--black);
+    text-align: center;
+    padding: 5rem 2rem;
+    border-top: var(--border);
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: 0.3rem;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background-color: var(--Main-color);
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: 0.7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 1.5rem;
+}
+
+.footer .links a:hover {
+    background-color: var(--Main-color);
+}
+
+.footer .credit {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 1.5rem;
+}
+
+.footer .credit span {
+    color: var(--Main-color);
+}
