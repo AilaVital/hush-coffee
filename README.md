@@ -1,8 +1,8 @@
-Manifesto do Design: Underground e Luxo
+# ☕ Hush Coffee
+**Design Manifesto: Underground & Luxury**
 
-Um projeto de front-end focado em uma experiência de usuário (UX) imersiva e minimalista.
+Um projeto de front-end focado em uma experiência de usuário (UX) imersiva e minimalista. 
 O site simula uma cafeteria exclusiva no Recife Antigo, utilizando:
-
-Semântico HTML5
-CSS3 Moderno (Grids e Flexbox)
-Modo escuro por
+- HTML5 Semântico
+- CSS3 Moderno (Grids e Flexbox)
+- Dark Mode por padrão
